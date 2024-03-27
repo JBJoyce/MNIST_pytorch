@@ -16,9 +16,9 @@ class FirstModel(torch.nn.Module):
         x = self.l1(x)
         x = F.ReLU(x)
         x = self.l2(x)
-        x = F.ReLU(x)
-        x = F.log_softmax(x)
-        return x
+        x = self.ReLU(x)
+        logits = self.l3(x)
+        return logits
     
 if __name__ == "__main__":
     first_model = FirstModel(28*28, 50, 10)
