@@ -58,9 +58,10 @@ if __name__ == '__main__':
     for epoch in range(epochs):
         print(f'Epoch {epoch+1}\n-------------------------------')
         train_loop(train_dl, model, loss_fn, optimizer)
+        print('')
+    print('Training done\n\n')
 
-    print('Training done\n')
+    print('Validation:')
     test_loop(valid_dl, model, loss_fn)
-    print('Validation done\n')
-    test_loop(test_dl, model, loss_fn)
-    print('Validation done')  
+    print('\nTest done')
+    test_loop(test_dl, model, loss_fn)  
