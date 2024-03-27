@@ -14,9 +14,9 @@ class FirstModel(torch.nn.Module):
     def forward(self, x):
         x = self.flatten(x)
         x = self.l1(x)
-        x = F.ReLU(x)
+        x = F.relu(x)
         x = self.l2(x)
-        x = self.ReLU(x)
+        x = F.relu(x)
         logits = self.l3(x)
         return logits
     
