@@ -12,7 +12,7 @@ class FirstModel(torch.nn.Module):
         self.l3 = nn.Linear(hidden_size, output_size)
         
     def forward(self, x):
-        x = self.Flatten(x)
+        x = self.flatten(x)
         x = self.l1(x)
         x = F.ReLU(x)
         x = self.l2(x)
