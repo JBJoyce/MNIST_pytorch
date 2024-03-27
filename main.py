@@ -63,5 +63,5 @@ if __name__ == '__main__':
 
     print('Validation:')
     test_loop(valid_dl, model, loss_fn)
-    print('\nTest done')
+    print('\nTesting:')
     test_loop(test_dl, model, loss_fn)  
